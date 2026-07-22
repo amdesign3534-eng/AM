@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#070b12" />
+  <title>AM DESIGN — Letreiros, Fachadas e Comunicação Visual</title>
+  <meta name="description" content="AM DESIGN — Criatividade, inovação e tecnologia em letreiros personalizados, fachadas em ACM, letreiros luminosos, LED neon, corte Router CNC, corte Laser CO2 e impressão 3D." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Barra de navegação -->
+  <header class="site-header" id="header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a href="#home" class="nav-logo" aria-label="AM DESIGN - Início">
+        <svg class="logo-mark" width="34" height="34" viewBox="0 0 100 100" role="img" aria-label="Logo AM DESIGN">
+          <use href="#am-logo" />
+        </svg>
+        <span class="nav-logo-text">AM<strong>DESIGN</strong></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contato" class="nav-cta">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Definição SVG reutilizável da logo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="amGrad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#3dffa2" />
+        <stop offset="100%" stop-color="#00c96b" />
+      </linearGradient>
+      <g id="am-logo">
+        <path d="M50 4 92 27v46L50 96 8 73V27z" fill="none" stroke="url(#amGrad)" stroke-width="4" stroke-linejoin="round" />
+        <path d="M28 68 42 30h6l14 38h-9l-2.6-7.6H39.6L37 68zm14.2-14.4h7.6L46 41z" fill="url(#amGrad)" />
+        <path d="M60 68V30h5l7 15 7-15h5v38h-7V47l-5 10-5-10v21z" fill="#eafff5" opacity=".9" />
+      </g>
+    </defs>
+  </svg>
+
+  <main>
+    <!-- HOME / HERO -->
+    <section id="home" class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-logo reveal" data-reveal>
+          <svg width="150" height="150" viewBox="0 0 100 100" role="img" aria-label="Logo principal AM DESIGN">
+            <use href="#am-logo" />
+          </svg>
+          <h1 class="hero-title">AM<span>DESIGN</span></h1>
+          <p class="hero-tagline">Comunicação visual que transforma marcas em experiências.</p>
+        </div>
+
+        <p class="hero-phrase reveal" data-reveal>
+          Criatividade, inovação e tecnologia para dar vida à sua fachada, letreiro e identidade.
+        </p>
+
+        <!-- VÍDEO EM DESTAQUE -->
+        <figure class="hero-video reveal" data-reveal>
+          <div class="video-frame">
+            <video
+              id="heroVideo"
+              poster="public/hero-poster.png"
+              playsinline
+              preload="none"
+              controls
+            >
+              <source src="C:\Users\Nelison pc\Desktop\Nova pasta\am-design\public\am2.mp4" type="video/mp4" /> 
+            </video>
+            <!-- Fallback visual enquanto não há vídeo (slideshow institucional) -->
+            <div class="video-fallback" id="videoFallback">
+              <div class="slideshow" aria-hidden="true">
+                <div class="slide is-active" style="background-image:url('public/hero-poster.png')"></div>
+                <div class="slide" style="background-image:url('public/neon-showcase.png')"></div>
+                <div class="slide" style="background-image:url('public/cnc-detail.png')"></div>
+              </div>
+              <div class="video-overlay">
+                <button class="play-btn" id="playBtn" aria-label="Reproduzir vídeo de apresentação">
+                  <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                </button>
+                <p class="video-caption">Vídeo de apresentação — projetos e diferenciais AM DESIGN</p>
+              </div>
+            </div>
+          </div>
+          <figcaption class="sr-only">Vídeo institucional da AM DESIGN apresentando serviços e projetos.</figcaption>
+        </figure>
+
+        <a href="#servicos" class="scroll-hint" aria-label="Rolar para serviços">
+          <span></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="section services">
+      <div class="container">
+        <header class="section-head reveal" data-reveal>
+          <p class="eyebrow">O que fazemos</p>
+          <h2 class="section-title">Nossos Serviços</h2>
+          <p class="section-sub">Soluções completas em comunicação visual, do projeto à instalação, com acabamento premium e tecnologia de ponta.</p>
+        </header>
+
+        <div class="cards" id="servicesGrid">
+          <!-- Os cards são injetados via JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE / DIFERENCIAIS -->
+    <section id="sobre" class="section about">
+      <div class="container about-inner">
+        <div class="about-text reveal" data-reveal>
+          <p class="eyebrow">Sobre a AM DESIGN</p>
+          <h2 class="section-title">Design que comunica, tecnologia que impressiona</h2>
+          <p>Somos especialistas em transformar ideias em peças visuais marcantes. Unimos criatividade, precisão de máquinas de corte de última geração e acabamento impecável para entregar projetos que destacam a sua marca.</p>
+          <div class="stats">
+            <div class="stat"><span class="stat-num" data-count="500">0</span><span class="stat-label">Projetos entregues</span></div>
+            <div class="stat"><span class="stat-num" data-count="16">0</span><span class="stat-label">Anos de experiência</span></div>
+            <div class="stat"><span class="stat-num" data-count="100">0</span><span class="stat-label">% de satisfação</span></div>
+          </div>
+        </div>
+        <div class="about-media reveal" data-reveal>
+          <img src="public/neon-showcase.png" alt="Letreiro LED neon verde personalizado criado pela AM DESIGN" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section contact">
+      <div class="container contact-inner">
+        <header class="section-head reveal" data-reveal>
+          <p class="eyebrow">Vamos conversar</p>
+          <h2 class="section-title">Entre em Contato</h2>
+          <p class="section-sub">Solicite um orçamento sem compromisso. Respondemos rápido pelo WhatsApp.</p>
+        </header>
+
+        <div class="contact-card reveal" data-reveal>
+          <div class="contact-phone">
+            <span class="contact-label">Fale conosco</span>
+            <a href="tel:+5592984062168" class="phone-number">+ 55 (92) 98406-2168</a>
+          </div>
+
+          <a href="https://wa.me/5592984062168?text=Ol%C3%A1%20AM%20DESIGN!%20Gostaria%20de%20um%20or%C3%A7amento." class="btn-whatsapp" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.8-.9-2.1-1-.28-.1-.48-.15-.68.15s-.78 1-.96 1.2c-.18.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.08-.8.38s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.8-.73 2.05-1.44.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l4.9-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.18-2.9.76.78-2.83-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+            Falar no WhatsApp
+          </a>
+
+          <div class="contact-extra">
+            <a href="mailto:amdesignbr@gmail.com" class="contact-item" aria-label="E-mail">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              amdesignbr@gmail.com
+            </a>
+            <div class="socials" aria-label="Redes sociais">
+              <a href="#" class="social" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a href="#" class="social" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9V7c0-.8.2-1 1-1h2V2h-3c-2.5 0-4 1.5-4 4v3H8v4h2v9h4v-9h3l.5-4z"/></svg></a>
+              <a href="#" class="social" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C20.4 8.65 22 11 22 14.4V21h-4v-5.8c0-1.4-.02-3.2-1.95-3.2-1.96 0-2.26 1.5-2.26 3.1V21H9z"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#home" class="nav-logo">
+        <svg class="logo-mark" width="28" height="28" viewBox="0 0 100 100" aria-hidden="true"><use href="#am-logo" /></svg>
+        <span class="nav-logo-text">AM<strong>DESIGN</strong></span>
+      </a>
+      <p class="footer-copy">© <span id="year"></span> AM DESIGN — Comunicação Visual. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5592984062168" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.15-1.8-.9-2.1-1-.28-.1-.48-.15-.68.15s-.78 1-.96 1.2c-.18.2-.35.22-.65.08-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.78-1.68-2.08-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.53.08-.8.38s-1.05 1.03-1.05 2.5 1.08 2.9 1.23 3.1c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.08 1.8-.73 2.05-1.44.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l4.9-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.18-2.9.76.78-2.83-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
